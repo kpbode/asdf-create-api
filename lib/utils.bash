@@ -41,7 +41,7 @@ download_release() {
 	version="$1"
 	filename="$2"
 
-	url="$GH_REPO/releases/download/${version}/create-api.artifactbundle.zip"
+	url="$GH_REPO/releases/${version}/download/create-api.artifactbundle.zip"
 
 	echo "* Downloading 1 $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
